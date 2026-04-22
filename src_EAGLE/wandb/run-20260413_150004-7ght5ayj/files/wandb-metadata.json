@@ -1,0 +1,39 @@
+{
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "CPython 3.8.20",
+  "startedAt": "2026-04-13T09:30:04.076699Z",
+  "args": [
+    "azureml_logging=false"
+  ],
+  "program": "train_segmentation_eigen.py",
+  "codePath": "train_segmentation_eigen.py",
+  "codePathLocal": "train_segmentation_eigen.py",
+  "email": "navneetbavineni@gmail.com",
+  "root": "D:\\Eagle_repo\\EAGLE-main\\src_EAGLE",
+  "host": "CSELAB10-24",
+  "executable": "C:\\Users\\kj728\\.conda\\envs\\EAGLE\\python.exe",
+  "cpu_count": 20,
+  "cpu_count_logical": 28,
+  "gpu": "NVIDIA RTX 4500 Ada Generation",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1853300404224",
+      "used": "727882371072"
+    }
+  },
+  "memory": {
+    "total": "68390989824"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA RTX 4500 Ada Generation",
+      "memoryTotal": "25763512320",
+      "cudaCores": 7680,
+      "architecture": "Ada",
+      "uuid": "GPU-9a2a7511-71d5-ad94-5672-3b8a5fefd02c"
+    }
+  ],
+  "cudaVersion": "12.8",
+  "writerId": "3zlbsoe8lb5ph1vsn19q2bcwkdkgirqw"
+}

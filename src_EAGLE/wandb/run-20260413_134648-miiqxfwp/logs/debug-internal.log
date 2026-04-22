@@ -1,0 +1,65 @@
+2026-04-13 13:46:48,995 INFO    MainThread:20224 [internal.py:wandb_internal():93] W&B internal server running at pid: 20224, started at: 2026-04-13 13:46:48.995343
+2026-04-13 13:46:48,995 INFO    WriterThread:20224 [datastore.py:open_for_write():75] open: D:\Eagle_repo\EAGLE-main\src_EAGLE\wandb\run-20260413_134648-miiqxfwp\run-miiqxfwp.wandb
+2026-04-13 13:46:48,995 DEBUG   SenderThread:20224 [sender.py:send():236] send: header
+2026-04-13 13:46:48,995 DEBUG   SenderThread:20224 [sender.py:send():236] send: run
+2026-04-13 13:46:48,995 INFO    SenderThread:20224 [sender.py:_maybe_setup_resume():494] checking resume status for navneetbavineni-shi/EAGLE/miiqxfwp
+2026-04-13 13:46:49,917 ERROR   SenderThread:20224 [internal_api.py:execute():161] 401 response executing GraphQL.
+2026-04-13 13:46:49,917 ERROR   SenderThread:20224 [internal_api.py:execute():162] {"errors":[{"message":"user is not logged in","path":["upsertBucket"],"extensions":{"code":"PERMISSION_ERROR"}}],"data":{"upsertBucket":null}}
+2026-04-13 13:46:49,996 INFO    WriterThread:20224 [datastore.py:close():279] close: D:\Eagle_repo\EAGLE-main\src_EAGLE\wandb\run-20260413_134648-miiqxfwp\run-miiqxfwp.wandb
+2026-04-13 13:46:49,996 INFO    HandlerThread:20224 [handler.py:finish():806] shutting down handler
+2026-04-13 13:46:49,996 ERROR   MainThread:20224 [internal.py:wandb_internal():165] Thread SenderThread:
+Traceback (most recent call last):
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\sdk\lib\retry.py", line 108, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\sdk\internal\internal_api.py", line 158, in execute
+    return self.client.execute(*args, **kwargs)
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\transport\requests.py", line 39, in execute
+    request.raise_for_status()
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\requests\models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\apis\normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\sdk\internal\internal_api.py", line 1341, in upsert_run
+    response = self.gql(mutation, variable_values=variable_values, **kwargs)
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\sdk\lib\retry.py", line 124, in __call__
+    if not check_retry_fn(e):
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\util.py", line 883, in no_retry_auth
+    raise CommError("Invalid or missing api_key. Run `wandb login`")
+wandb.errors.CommError: Invalid or missing api_key. Run `wandb login`
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\sdk\internal\internal_util.py", line 51, in run
+    self._run()
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\sdk\internal\internal_util.py", line 102, in _run
+    self._process(record)
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\sdk\internal\internal.py", line 310, in _process
+    self._sm.send(record)
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\sdk\internal\sender.py", line 238, in send
+    send_handler(record)
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\sdk\internal\sender.py", line 696, in send_run
+    self._init_run(run, config_value_dict)
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\sdk\internal\sender.py", line 734, in _init_run
+    commit=run.git.last_commit or None,
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\apis\normalize.py", line 61, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\apis\normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\sdk\internal\internal_api.py", line 1341, in upsert_run
+    response = self.gql(mutation, variable_values=variable_values, **kwargs)
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\sdk\lib\retry.py", line 124, in __call__
+    if not check_retry_fn(e):
+  File "C:\Users\kj728\.conda\envs\stego36_py36\lib\site-packages\wandb\util.py", line 883, in no_retry_auth
+    raise CommError("Invalid or missing api_key. Run `wandb login`")
+wandb.errors.CommError: Invalid or missing api_key. Run `wandb login`
+2026-04-13 13:46:52,019 INFO    MainThread:20224 [internal.py:handle_exit():80] Internal process exited

@@ -1,0 +1,16 @@
+output_root: '../'
+model_path: "D:/Eagle_repo/EAGLE-main/EAGLE_COCO_ViTS8.ckpt"
+image_dir: "D:/Eagle_repo/EAGLE-main/src_EAGLE/pytorch_data_dir/cocostuff/images/val2017"
+pytorch_data_dir: "D:/Eagle_repo/EAGLE-main/src_EAGLE/pytorch_data_dir"
+experiment_name: "cocostuff_val"
+res: 320
+batch_size: 8
+num_workers: 8
+use_ddp: False
+
+hydra:
+  run:
+    dir: "."
+  output_subdir: ~
+  #job_logging: "disabled"
+  #hydra_logging: "disabled"

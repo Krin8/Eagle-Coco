@@ -1,0 +1,92 @@
+
+   | Name                          | Type                  | Params
+-------------------------------------------------------------------------
+0  | net                           | DinoFeaturizer        | 24.2 M
+1  | train_cluster_probe_eigen     | ClusterLookup         | 96
+2  | train_cluster_probe_eigen_aug | ClusterLookup         | 96
+3  | train_cluster_probe           | ClusterLookup         | 13.8 K
+4  | cluster_probe                 | ClusterLookup         | 16.4 K
+5  | linear_probe                  | Conv2d                | 13.9 K
+6  | decoder                       | Conv2d                | 590 K
+7  | project_head                  | Linear                | 262 K
+8  | cluster_metrics               | UnsupervisedMetrics   | 0
+9  | linear_metrics                | UnsupervisedMetrics   | 0
+10 | test_cluster_metrics          | UnsupervisedMetrics   | 0
+11 | test_linear_metrics           | UnsupervisedMetrics   | 0
+12 | CELoss                        | newLocalGlobalInfoNCE | 13.8 K
+13 | eigen_loss_fn                 | EigenLoss             | 0
+14 | linear_probe_loss_fn          | CrossEntropyLoss      | 0
+15 | contrastive_corr_loss_fn      | CorrespondenceLoss    | 0
+-------------------------------------------------------------------------
+3.4 M     Trainable params
+21.7 M    Non-trainable params
+25.1 M    Total params
+100.364   Total estimated model params size (MB)
+Epoch 0:  14%|████████████████████▋                                                                                                                                | 16502/118626 [2:53:10<17:51:44,  1.59it/s, v_num=t7rt]
+Validating:   0%|                                                                                                                                                                                  | 0/680 [00:00<?, ?it/s]
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\torch\utils\data\dataloader.py", line 990, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\queue.py", line 178, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "train_segmentation_eigen.py", line 570, in my_app
+    trainer.fit(model, train_loader, val_loader)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\trainer\trainer.py", line 740, in fit
+    self._call_and_handle_interrupt(
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\trainer\trainer.py", line 685, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\trainer\trainer.py", line 777, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\trainer\trainer.py", line 1199, in _run
+    self._dispatch()
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\trainer\trainer.py", line 1279, in _dispatch
+    self.training_type_plugin.start_training(self)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\plugins\training_type\training_type_plugin.py", line 202, in start_training
+    self._results = trainer.run_stage()
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\trainer\trainer.py", line 1289, in run_stage
+    return self._run_train()
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\trainer\trainer.py", line 1319, in _run_train
+    self.fit_loop.run()
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\loops\base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\loops\fit_loop.py", line 234, in advance
+    self.epoch_loop.run(data_fetcher)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\loops\base.py", line 146, in run
+    self.on_advance_end()
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\loops\epoch\training_epoch_loop.py", line 242, in on_advance_end
+    self._run_validation()
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\loops\epoch\training_epoch_loop.py", line 337, in _run_validation
+    self.val_loop.run()
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\loops\base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\loops\dataloader\evaluation_loop.py", line 110, in advance
+    dl_outputs = self.epoch_loop.run(dataloader, dataloader_idx, dl_max_batches, self.num_dataloaders)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\loops\base.py", line 140, in run
+    self.on_run_start(*args, **kwargs)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\loops\epoch\evaluation_epoch_loop.py", line 86, in on_run_start
+    self._dataloader_iter = _update_dataloader_iter(data_fetcher, self.batch_progress.current.ready)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\loops\utilities.py", line 121, in _update_dataloader_iter
+    dataloader_iter = enumerate(data_fetcher, batch_idx)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\utilities\fetching.py", line 199, in __iter__
+    self.prefetching(self.prefetch_batches)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\utilities\fetching.py", line 258, in prefetching
+    self._fetch_next_batch()
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\pytorch_lightning\utilities\fetching.py", line 300, in _fetch_next_batch
+    batch = next(self.dataloader_iter)
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\torch\utils\data\dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\torch\utils\data\dataloader.py", line 1186, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\torch\utils\data\dataloader.py", line 1142, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\kj728\.conda\envs\EAGLE\lib\site-packages\torch\utils\data\dataloader.py", line 1003, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 21720, 27720, 28804, 28916, 7216, 5076, 23520, 20980) exited unexpectedly
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

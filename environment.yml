@@ -1,0 +1,32 @@
+name: EAGLE
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.8
+  - pip
+  - pytorch=1.10.2
+  - torchvision=0.11.3
+  - torchaudio=0.10.2
+  - cudatoolkit=11.3
+  - scikit-image
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - tqdm
+  - pillow
+  - pip:
+      - wandb
+      - hydra-core
+      - pytorch-lightning
+      - seaborn
+      - kornia
+      - wget
+      - easydict
+      - kmeans-pytorch
+      - opencv-python
+      - pydensecrf
+      - torchpq

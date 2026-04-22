@@ -1,0 +1,25 @@
+
+   | Name                          | Type                  | Params
+-------------------------------------------------------------------------
+0  | net                           | DinoFeaturizer        | 24.2 M
+1  | train_cluster_probe_eigen     | ClusterLookup         | 96
+2  | train_cluster_probe_eigen_aug | ClusterLookup         | 96
+3  | train_cluster_probe           | ClusterLookup         | 13.8 K
+4  | cluster_probe                 | ClusterLookup         | 16.4 K
+5  | linear_probe                  | Conv2d                | 13.9 K
+6  | decoder                       | Conv2d                | 590 K
+7  | project_head                  | Linear                | 262 K
+8  | cluster_metrics               | UnsupervisedMetrics   | 0
+9  | linear_metrics                | UnsupervisedMetrics   | 0
+10 | test_cluster_metrics          | UnsupervisedMetrics   | 0
+11 | test_linear_metrics           | UnsupervisedMetrics   | 0
+12 | CELoss                        | newLocalGlobalInfoNCE | 13.8 K
+13 | eigen_loss_fn                 | EigenLoss             | 0
+14 | linear_probe_loss_fn          | CrossEntropyLoss      | 0
+15 | contrastive_corr_loss_fn      | CorrespondenceLoss    | 0
+-------------------------------------------------------------------------
+3.4 M     Trainable params
+21.7 M    Non-trainable params
+25.1 M    Total params
+100.364   Total estimated model params size (MB)
+Epoch 0:   0%|                                                                                                                                                  | 67/118626 [04:17<126:19:33,  3.84s/it, v_num=s3ok]

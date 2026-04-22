@@ -1,0 +1,392 @@
+_wandb:
+    value:
+        cli_version: 0.24.2
+        e:
+            5faw15cx5t7hww2z0ye7hqgk4qtii13k:
+                codePath: train_segmentation_eigen.py
+                codePathLocal: train_segmentation_eigen.py
+                cpu_count: 20
+                cpu_count_logical: 28
+                cudaVersion: "12.8"
+                disk:
+                    /:
+                        total: "1853300404224"
+                        used: "727880884224"
+                email: navneetbavineni@gmail.com
+                executable: C:\Users\kj728\.conda\envs\EAGLE\python.exe
+                gpu: NVIDIA RTX 4500 Ada Generation
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 7680
+                      memoryTotal: "25763512320"
+                      name: NVIDIA RTX 4500 Ada Generation
+                      uuid: GPU-9a2a7511-71d5-ad94-5672-3b8a5fefd02c
+                host: CSELAB10-24
+                memory:
+                    total: "68390989824"
+                os: Windows-10-10.0.26200-SP0
+                program: train_segmentation_eigen.py
+                python: CPython 3.8.20
+                root: D:\Eagle_repo\EAGLE-main\src_EAGLE
+                startedAt: "2026-04-13T09:19:15.254719Z"
+                writerId: 5faw15cx5t7hww2z0ye7hqgk4qtii13k
+        m:
+            - "1": trainer/global_step
+              "6":
+                - 3
+              "7": []
+            - "2": '*'
+              "5": 1
+              "6":
+                - 1
+              "7": []
+        python_version: 3.8.20
+        t:
+            "1":
+                - 1
+                - 5
+                - 9
+                - 41
+                - 50
+                - 53
+            "2":
+                - 1
+                - 5
+                - 9
+                - 41
+                - 50
+                - 53
+            "3":
+                - 7
+                - 13
+                - 61
+                - 66
+            "4": 3.8.20
+            "5": 0.24.2
+            "8":
+                - 3
+            "12": 0.24.2
+            "13": windows-amd64
+alpha:
+    value: 0.5
+arch:
+    value: dino
+aug_alignment_weight:
+    value: 0
+azureml_logging:
+    value: true
+batch_size:
+    value: 32
+beta:
+    value: 0.15
+centroid_mode:
+    value: prototype
+cfg/alpha:
+    value: 0.5
+cfg/arch:
+    value: dino
+cfg/aug_alignment_weight:
+    value: 0
+cfg/azureml_logging:
+    value: true
+cfg/batch_size:
+    value: 32
+cfg/beta:
+    value: 0.15
+cfg/centroid_mode:
+    value: prototype
+cfg/checkpoint_freq:
+    value: 100
+cfg/color_space:
+    value: rgb
+cfg/continuous:
+    value: true
+cfg/contrastive_temp:
+    value: 0.07
+cfg/correspondence_weight:
+    value: 1
+cfg/crf_samples:
+    value: 1000
+cfg/crf_weight:
+    value: 0
+cfg/crop_ratio:
+    value: 0.5
+cfg/crop_type:
+    value: five
+cfg/dataset_name:
+    value: cocostuff27
+cfg/dim:
+    value: 512
+cfg/dino_feat_type:
+    value: KK
+cfg/dino_patch_size:
+    value: 8
+cfg/dir_dataset_n_classes:
+    value: 5
+cfg/dir_dataset_name:
+    value: None
+cfg/dropout:
+    value: true
+cfg/eigen_cluster:
+    value: 4
+cfg/eigen_cluster_out:
+    value: 32
+cfg/entity:
+    value: navneetbavineni-shi
+cfg/experiment_name:
+    value: cocostuff_EAGLE
+cfg/extra_clusters:
+    value: 5
+cfg/feature_samples:
+    value: 11
+cfg/full_name:
+    value: cocostuff27/cocostuff27_Apr13_18-19-13_vit_small_cocostuff_EAGLE
+cfg/gamma:
+    value: 0.05
+cfg/global_loss_weight:
+    value: 0.7
+cfg/granularity:
+    value: 1
+cfg/has_labels:
+    value: false
+cfg/hist_freq:
+    value: 100
+cfg/loader_crop_type:
+    value: center
+cfg/local_pos_aug_weight:
+    value: 0.85
+cfg/local_pos_weight:
+    value: 0.85
+cfg/log_dir:
+    value: cocostuff27
+cfg/lr:
+    value: 0.0005
+cfg/lr_cluster:
+    value: 0.005
+cfg/lr_cluster_eigen:
+    value: 5e-05
+cfg/lr_linear:
+    value: 0.001
+cfg/max_steps:
+    value: 10000
+cfg/model_type:
+    value: vit_small
+cfg/momentum_limit:
+    value: 0.9
+cfg/n_images:
+    value: 4
+cfg/neg_inter_weight:
+    value: 0.63
+cfg/neg_samples:
+    value: 5
+cfg/num_neighbors:
+    value: 5
+cfg/num_workers:
+    value: 10
+cfg/output_root:
+    value: ../
+cfg/pointwise:
+    value: true
+cfg/pos_inter_weight:
+    value: 0.25
+cfg/pos_intra_weight:
+    value: 1
+cfg/pretrained_weights:
+    value: None
+cfg/project_name:
+    value: EAGLE
+cfg/projection_type:
+    value: nonlinear
+cfg/pytorch_data_dir:
+    value: D:\Eagle_repo\EAGLE-main\src_EAGLE\pytorch_data_dir
+cfg/rec_weight:
+    value: 0
+cfg/recluster_threshold:
+    value: 0.85
+cfg/repulsion_weight:
+    value: 0
+cfg/res:
+    value: 224
+cfg/reset_probe_steps:
+    value: None
+cfg/scalar_log_freq:
+    value: 100
+cfg/shift:
+    value: 0
+cfg/shift_bias:
+    value: 0
+cfg/shift_value:
+    value: 3.5
+cfg/stabalize:
+    value: true
+cfg/step_schedulers:
+    value: 200
+cfg/stop_at_zero:
+    value: true
+cfg/submitting_to_aml:
+    value: false
+cfg/use_fit_model:
+    value: false
+cfg/use_head:
+    value: true
+cfg/use_recalibrator:
+    value: false
+cfg/use_true_labels:
+    value: false
+cfg/val_freq:
+    value: 100
+cfg/w1:
+    value: 10
+cfg/w2:
+    value: 3
+cfg/zero_clamp:
+    value: true
+checkpoint_freq:
+    value: 100
+color_space:
+    value: rgb
+continuous:
+    value: true
+contrastive_temp:
+    value: 0.07
+correspondence_weight:
+    value: 1
+crf_samples:
+    value: 1000
+crf_weight:
+    value: 0
+crop_ratio:
+    value: 0.5
+crop_type:
+    value: five
+dataset_name:
+    value: cocostuff27
+dim:
+    value: 512
+dino_feat_type:
+    value: KK
+dino_patch_size:
+    value: 8
+dir_dataset_n_classes:
+    value: 5
+dir_dataset_name:
+    value: None
+dropout:
+    value: true
+eigen_cluster:
+    value: 4
+eigen_cluster_out:
+    value: 32
+entity:
+    value: navneetbavineni-shi
+experiment_name:
+    value: cocostuff_EAGLE
+extra_clusters:
+    value: 5
+feature_samples:
+    value: 11
+full_name:
+    value: cocostuff27/cocostuff27_Apr13_18-19-13_vit_small_cocostuff_EAGLE
+gamma:
+    value: 0.05
+global_loss_weight:
+    value: 0.7
+granularity:
+    value: 1
+has_labels:
+    value: false
+hist_freq:
+    value: 100
+loader_crop_type:
+    value: center
+local_pos_aug_weight:
+    value: 0.85
+local_pos_weight:
+    value: 0.85
+log_dir:
+    value: cocostuff27
+lr:
+    value: 0.0005
+lr_cluster:
+    value: 0.005
+lr_cluster_eigen:
+    value: 5e-05
+lr_linear:
+    value: 0.001
+max_steps:
+    value: 10000
+model_type:
+    value: vit_small
+momentum_limit:
+    value: 0.9
+n_classes:
+    value: 27
+n_images:
+    value: 4
+neg_inter_weight:
+    value: 0.63
+neg_samples:
+    value: 5
+num_neighbors:
+    value: 5
+num_workers:
+    value: 10
+output_root:
+    value: ../
+pointwise:
+    value: true
+pos_inter_weight:
+    value: 0.25
+pos_intra_weight:
+    value: 1
+pretrained_weights:
+    value: None
+project_name:
+    value: EAGLE
+projection_type:
+    value: nonlinear
+pytorch_data_dir:
+    value: D:\Eagle_repo\EAGLE-main\src_EAGLE\pytorch_data_dir
+rec_weight:
+    value: 0
+recluster_threshold:
+    value: 0.85
+repulsion_weight:
+    value: 0
+res:
+    value: 224
+reset_probe_steps:
+    value: None
+scalar_log_freq:
+    value: 100
+shift:
+    value: 0
+shift_bias:
+    value: 0
+shift_value:
+    value: 3.5
+stabalize:
+    value: true
+step_schedulers:
+    value: 200
+stop_at_zero:
+    value: true
+submitting_to_aml:
+    value: false
+use_fit_model:
+    value: false
+use_head:
+    value: true
+use_recalibrator:
+    value: false
+use_true_labels:
+    value: false
+val_freq:
+    value: 100
+w1:
+    value: 10
+w2:
+    value: 3
+zero_clamp:
+    value: true

@@ -1,0 +1,13 @@
+{"time":"2026-04-13T15:03:03.3373316+05:30","level":"INFO","msg":"stream: starting","core version":"0.24.2"}
+{"time":"2026-04-13T15:03:03.774285+05:30","level":"INFO","msg":"stream: created new stream","id":"2yavt7rt"}
+{"time":"2026-04-13T15:03:03.774285+05:30","level":"INFO","msg":"handler: started","stream_id":"2yavt7rt"}
+{"time":"2026-04-13T15:03:03.7750265+05:30","level":"INFO","msg":"stream: started","id":"2yavt7rt"}
+{"time":"2026-04-13T15:03:03.7750265+05:30","level":"INFO","msg":"writer: started","stream_id":"2yavt7rt"}
+{"time":"2026-04-13T15:03:03.7750265+05:30","level":"INFO","msg":"sender: started","stream_id":"2yavt7rt"}
+{"time":"2026-04-13T17:51:49.9651596+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/navneetbavineni-shi/EAGLE/2yavt7rt/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2026-04-13T17:51:52.3302147+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/navneetbavineni-shi/EAGLE/2yavt7rt/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2026-04-13T17:56:27.5795653+05:30","level":"INFO","msg":"stream: closing","id":"2yavt7rt"}
+{"time":"2026-04-13T17:56:28.6733656+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-13T17:56:29.244734+05:30","level":"INFO","msg":"handler: closed","stream_id":"2yavt7rt"}
+{"time":"2026-04-13T17:56:29.244734+05:30","level":"INFO","msg":"sender: closed","stream_id":"2yavt7rt"}
+{"time":"2026-04-13T17:56:29.244734+05:30","level":"INFO","msg":"stream: closed","id":"2yavt7rt"}
