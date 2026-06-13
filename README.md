@@ -42,9 +42,6 @@ python download_datasets.py
 
 cd /YOUR/DATA/DIR
 unzip cocostuff.zip
-unzip cityscapes.zip
-unzip potsdam.zip
-unzip potsdamraw.zip
 ```
 
 ## 🦾Training
@@ -82,11 +79,6 @@ We release the weights on trained EAGLE:
     <td align="center">ViT-S/8</td>
     <td><a href="https://drive.google.com/file/d/1fRZB_Tx2cZn5XayY0MiC9gv6D9kML7lh/view?usp=sharing">link</td>
   </tr>
-  <tr>
-    <td align="center">Cityscapes</td>
-    <td align="center">ViT-B/8</td>
-    <td><a href="https://drive.google.com/file/d/1W943QkhcnD2l3Ye58ovG5fsGdZ1uFpuH/view?usp=sharing">link</td>
-  </tr>
 </table>
 
 ## :eagle: About EAGLE
@@ -106,7 +98,7 @@ The pipeline of **EAGLE**. Leveraging the Laplacian matrix, which integrates hie
 
 
 ### Results
-We evaluate the EAGLE algorithm on the CocoStuff, Cityscapes, and Potsdam-3 datasets.
+We evaluate the EAGLE algorithm on the CocoStuff dataset.
 
 ![main_results](./img/results.png)
 
